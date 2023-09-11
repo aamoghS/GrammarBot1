@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Linked List Java Code</title>
+</head>
+<body>
+    <h1>Linked List Implementation in Java</h1>
+
+    <h2>Info Class</h2>
+    <pre>
+        <code>
+public class Info {
+    private String name;
+    private int number;
+
+    public Info(String name, int number) {
+        this.name = name;
+        this.number = number;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setName(String newName) {
+        this.name = newName;
+    }
+
+    public void setNumber(int newNumber) {
+        this.number = newNumber;
+    }
+
+    //@Override
+    public String toString() {
+        return name + " " + number;
+    }
+}
+        </code>
+    </pre>
+
+    <!-- Repeat the same format for other classes and methods -->
+
+    <h2>Node Class</h2>
+    <pre>
+        <code>
+public class Node {
+    private Info data;
+    private Node next;
+
+    public Info getData() {
+        return data;
+    }
+
+    public void setData(Info data) {
+        this.data = data;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+}
+        </code>
+    </pre>
+
+    <!-- Include other classes and methods similarly -->
+
+    <h2>random notes also on it</h2>
+    <pre>
+        <code>
+public void search(String name) {
+    Node current = head;
+
+    while (current != null) {
+        if (current.getData().getName().equals(name)) {
+            System.out.println("Name: " + name + ", Number: " + current.getData().getNumber());
+            return;
+        }
+        current = current.getNext();
+    }
+
+    System.out.println("not there buddy");
+}
+        
+  Typically with insering you have to instantiate  a node class
+            <br>
+Insert at end 
+instantiate a new variable called new node with the node class 
+set info from parameters into the new node 
+check if head == null
+if head == null then head = new node 
+else 
+node temp = head
+while (temp != head )
+{
+temp = temp.getNext();
+}
+temp.setNext(newnode) 
+}
+          <br>
+Delete 
+Assumed you are given a poition
+Check if postionE is at start 
+If position == 1 then head =head.getNext(); // set head to this position
+Else
+Node current = head
+Node prev = null
+Current pointer = 1
+While (current != null AND current < positionE)
+{
+Prev = current 
+Current = current.getNext();
+}
+Prev.setNext(current.getNext());
+
+Insert anywhere (Info, int positionE)
+Node new node = new Node();
+newNode.setData(info)
+if (position == 1 or head == null then
+newnode.setData(head)
+head = newNode; 
+else
+node current = head
+for (i++; I < positionE -1; int I = 1;)
+if (current.getNext() = null)
+then
+dne
+else 
+current = current.getNext()
+}
+Newnode.setNext(current.getNext()))
+Current.setNext(newNode); 
+
+
+Print 
+Node temp = head
+While (temp!= null)
+Print temp.getData) 
+Temp = temp.getNext()
+
+Count 
+Node current = head
+Count = 0
+While (current != head)
+count ++
+Current = current.getNExt()
+}
+return count
+-------------------------------------
+
+public void search(String name) {
+
+Node current = head;
+
+while (current != null) {
+
+if (current.getData().getName().equals(name)) {
+
+System.out.println("Name: " + name + ", Number: " + current.getData().getNumber());
+
+return;
+
+}
+
+current = current.getNext();
+
+}
+
+System.out.println("not there buddy");
+
+}
+
+
+        </code>
+    </pre>
+    <!-- Include other methods like insert, delete, etc. -->
+
+</body>
+</html>
